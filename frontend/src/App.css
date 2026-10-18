@@ -1,0 +1,264 @@
+.todo-app {
+  width: min(680px, calc(100% - 32px));
+  margin: 64px auto;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 24px;
+  box-shadow: 0 16px 60px #263b6410;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.heading-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.heading-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(26px, 5vw, 34px);
+  letter-spacing: -1px;
+}
+
+.app-header h1 span {
+  color: #6366f1;
+}
+
+.app-header p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.add-form,
+.edit-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-form > input,
+.edit-form > input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: #0f172a;
+}
+
+.add-form > input:focus,
+.edit-form > input:focus {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 11px;
+  transition: background 150ms, transform 150ms;
+}
+
+.icon-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
+.primary {
+  width: 48px;
+  height: 48px;
+  color: white;
+  background: #4f46e5;
+}
+
+.primary:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.edit {
+  color: #4f46e5;
+  background: #eef2ff;
+}
+
+.delete {
+  color: #dc2626;
+  background: #fff1f2;
+}
+
+.save {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.neutral {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.progress-section {
+  margin: 24px 0 12px;
+}
+
+.progress-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.progress-caption strong {
+  color: #4f46e5;
+}
+
+.progress-bar {
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 99px;
+  overflow: hidden;
+  appearance: none;
+  background: #eef2f7;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background: #eef2f7;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: #6366f1;
+  border-radius: 99px;
+}
+
+.progress-bar::-moz-progress-bar {
+  background: #6366f1;
+  border-radius: 99px;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.todo-item:last-child {
+  border-bottom: 0;
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.todo-label input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #6366f1;
+}
+
+.todo-label span {
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.done {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.edit-form {
+  width: 100%;
+}
+
+.empty-state {
+  padding: 24px 0 8px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.error {
+  padding: 12px;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+@media (max-width: 480px) {
+  .todo-app {
+    margin: 24px auto;
+    padding: 20px;
+  }
+
+  .app-header {
+    gap: 12px;
+  }
+
+  .icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .primary {
+    width: 46px;
+    height: 46px;
+  }
+
+  .todo-item {
+    gap: 8px;
+  }
+
+  .todo-actions {
+    gap: 4px;
+  }
+}

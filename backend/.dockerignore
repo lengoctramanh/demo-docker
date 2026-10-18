@@ -1,0 +1,5 @@
+#Loại các file không cần đưa vào quá trình build
+node_modules
+.env
+.git
+npm-debug.log
